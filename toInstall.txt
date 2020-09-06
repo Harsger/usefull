@@ -1,0 +1,20 @@
+vim
+nano
+gedit
+kate 
+kdevelop
+htop
+screen
+vlc
+inkscape
+gimp
+
+LaTeX->texstudio
+
+git
+g++
+python
+java
+root -> 6.20/04
+HistPresent
+opencv
