@@ -3,6 +3,7 @@ nano
 gedit
 kate 
 kdevelop
+sudo apt install qt5-style-plugins
 htop
 screen
 vlc
