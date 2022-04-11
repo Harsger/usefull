@@ -107,9 +107,6 @@ def main(argv) :
     if len(filelist) < 1 :
         print( str(usage) )
         sys.exit(8)
-    
-    for p , v in parameters.items() :
-        print( str(p)+'\t:\t'+str(v) )
 
     for filename in filelist :
         if( 
