@@ -1,4 +1,4 @@
-export PS1="\[\033[1;32m\] @ \H @ \d \A < \W > : \[\033[0m\]"
+export PS1="\[\033[1;32m\] @ \H @ \$(date +%Y-%m-%d) \$(date +%H:%M:%S) < \W > : \[\033[0m\]"
 
 PROMPT_COMMAND='echo -ne "\033]0;$(basename `pwd`)\007"'
 
@@ -33,8 +33,8 @@ alias ..='cd ..'
 alias cdb='..;lm'
 
 #source ~/ROOT/bin/thisroot.sh
-alias loadroot='source /home/harsger/ROOT/bin/thisroot.sh'
+alias loadroot='source ~/ROOT/bin/thisroot.sh'
 alias root='root -l'
 
-alias loadhistpresent='. /home/harsger/marabou/iniHprPath'
+alias loadhistpresent='. ~/marabou/iniHprPath'
 alias HI='HistPresent'
