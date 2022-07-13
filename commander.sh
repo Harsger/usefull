@@ -82,12 +82,12 @@ for entry in ${!commandList[@]}; do
             nextCommand=${nextCommand}${listEntry[${columnNumber}]}
         fi
     done
-    if [[ ${debugOption} == 'D' ]]; then
-        echo ${nextCommand}
-    elif [[ ${debugOption} == 'S' ]]; then
+    if [[ ${debugOption} == 'execute' ]]; then
+        eval ${nextCommand}
+    elif [[ ${debugOption} == 'verbose' ]]; then
         echo ${nextCommand}
         eval ${nextCommand}
     else
-        eval ${nextCommand}
+        echo ${nextCommand}
     fi
 done
