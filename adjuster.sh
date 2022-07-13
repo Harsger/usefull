@@ -25,10 +25,12 @@ if [[ $# -gt 3 ]]; then
     done
 fi
 
-echo " filename   : "${filename}
-echo " adjustment : "${adjustment}
-echo " optONE     : "${optONE}
-echo " moreOpts   : "${moreOpts}
+toExecute=true
+
+if [[ "${adjustment}" == "-"* ]]; then
+    toExecute=false
+    adjustment=${adjustment/-}
+fi
 
 command=""
 
@@ -42,9 +44,13 @@ elif [[ "${adjustment}" == "REPLACE"   ]]; then
     command="sed -i 's/^""${optONE}""/""${moreOpts}""/' ""${filename}"
 elif [[ "${adjustment}" == "SET"       ]]; then
     command="sed -i 's/^\(""${optONE}""[ \t]*\).*$/\1""${moreOpts}""/' ""${filename}"
+else
+    echo -e "${usageOutput}"
+    exit 2
 fi
 
-echo " command : ""${command}"
-if [[ "${command}" != "" ]]; then
+if [ "${toExecute}" = true ]; then
     eval "${command}"
+else
+    echo " ""${command}"
 fi 
