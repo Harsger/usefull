@@ -41,7 +41,7 @@ elif [[ "${adjustment}" == "ADDBEFORE" ]]; then
 elif [[ "${adjustment}" == "DELETE"    ]]; then
     command="sed -i '/^""${optONE}""/ d' ""${filename}"
 elif [[ "${adjustment}" == "REPLACE"   ]]; then
-    command="sed -i 's/^""${optONE}""/""${moreOpts}""/' ""${filename}"
+    command="sed -i 's/""${optONE}""/""${moreOpts}""/g' ""${filename}"
 elif [[ "${adjustment}" == "SET"       ]]; then
     command="sed -i 's/^\(""${optONE}""[ \t]*\).*$/\1""${moreOpts}""/' ""${filename}"
 else
