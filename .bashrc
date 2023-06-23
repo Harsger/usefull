@@ -32,6 +32,8 @@ alias la='ls -rthla'
 alias ..='cd ..'
 alias cdb='..;lm'
 
+alias checkUpdates='sudo apt-get update && sudo apt-get dist-upgrade'
+
 #source ~/ROOT/bin/thisroot.sh
 alias loadroot='source ~/ROOT/bin/thisroot.sh'
 alias root='root -l'
