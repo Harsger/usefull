@@ -8,4 +8,6 @@ set shiftwidth  =4
 set expandtab
 set hlsearch
 set cursorline
-set cursorcolumn
+" set cursorcolumn
+set nu
+set colorcolumn=80
