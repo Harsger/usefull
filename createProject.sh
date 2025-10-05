@@ -113,6 +113,9 @@ cat >> build.sh << '_EOF_'
 export ANDROID_HOME="../android-sdk"
 TOOLS_DIR="/build-tools/25.0.2"
 
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+
 AAPT=${ANDROID_HOME}${TOOLS_DIR}"/aapt"
 DX=${ANDROID_HOME}${TOOLS_DIR}"/dx"
 ZIPALIGN=${ANDROID_HOME}${TOOLS_DIR}"/zipalign"
